@@ -1,0 +1,57 @@
+data:
+  max_input_length: 1024
+  max_samples: 10000
+  max_target_length: 256
+  train_split: 0.9
+  val_split: 0.1
+deployment:
+  host: 0.0.0.0
+  ngrok_token: 2sV7t8ID8Ezdy2IJEB3yngswQf7_81vvYkxHYuNe7z6AYBC2A
+  port: 8000
+evaluation:
+  rouge_types:
+  - rouge1
+  - rouge2
+  - rougeL
+  save_predictions: true
+model:
+  lora:
+    bias: none
+    lora_alpha: 32
+    lora_dropout: 0.1
+    r: 16
+    task_type: SEQ_2_SEQ_LM
+  qa:
+    base_model: distilbert-base-uncased-distilled-squad
+    doc_stride: 128
+    max_length: 384
+  summarizer:
+    base_model: sshleifer/distilbart-cnn-12-6
+    max_length: 512
+    min_length: 100
+    num_beams: 4
+paths:
+  cache_dir: ./cache
+  data_dir: /kaggle/input
+  logs_dir: ./logs
+  model_save_dir: ./models
+  output_dir: ./outputs
+training:
+  qa:
+    batch_size: 8
+    fp16: true
+    gradient_accumulation_steps: 2
+    learning_rate: 5.0e-05
+    max_grad_norm: 1.0
+    num_epochs: 2
+    warmup_steps: 300
+    weight_decay: 0.01
+  summarizer:
+    batch_size: 4
+    fp16: true
+    gradient_accumulation_steps: 4
+    learning_rate: 0.0003
+    max_grad_norm: 1.0
+    num_epochs: 3
+    warmup_steps: 500
+    weight_decay: 0.01

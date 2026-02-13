@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+venv/
+env/
+
+# Models (large files - don't commit)
+models/*.bin
+models/*.pth
+models/*.safetensors
+
+# Data
+data/raw/*
+data/processed/*
+
+# Logs
+logs/*.log
+*.log
+
+# Cache
+cache/
+.cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
