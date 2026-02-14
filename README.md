@@ -4,7 +4,7 @@ A production-ready AI system for intelligent research paper summarization and qu
 
 ## Overview
 
-PaperMind leverages state-of-the-art natural language processing to help researchers quickly understand and extract information from academic papers. The system uses fine-tuned DistilBART for abstractive summarization and DistilBERT for extractive question answering, trained on academic literature.
+PaperMind helps researchers quickly understand and extract information from academic papers. The system uses fine-tuned DistilBART for abstractive summarization and DistilBERT for extractive question answering, trained on academic literature.
 
 ## Key Features
 
