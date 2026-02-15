@@ -8,13 +8,13 @@ PaperMind helps researchers quickly understand and extract information from acad
 
 ---
 
-## 📸 Application Preview
+## Application Preview
 
-### 🔎 Q&A Interface
-<img src="appQ&A.png" width="800">
+<p align="center">
+  <img src="appSummary.png" width="45%">
+  <img src="appQ&A.png" width="45%">
+</p>
 
-### 📝 Paper Summarization Interface
-<img src="appSummary.png" width="800">
 
 ---
 
